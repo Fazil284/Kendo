@@ -1,0 +1,63 @@
+﻿@model IEnumerable<KendoTask.Models.EmpClass>
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2021.2.616/styles/kendo.default-v2.min.css" />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.2.616/js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div id="grid"></div>
+    <script>
+     $("#grid").kendoGrid({
+         dataSource: {
+             data: EmpClass,
+              pageSize: 20,
+         },
+
+
+         height: 550,
+         groupable: true,
+         sortable: true,
+         pageable: {
+             refresh: true,
+             pageSizes: true,
+             buttonCount: 5,
+         },
+         columns: [
+             {
+                 template:
+                     "<div class='customer-photo'" +
+                     "style='background-image: url(../content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
+                     "<div class='customer-name'>#: ContactName #</div>",
+                 field: "Id",
+                 title: "Contact Name",
+                 width: 240,
+             },
+             {
+                 field: "Name",
+                 title: "Contact Title",
+             },
+             {
+                 field: "Salary",
+                 title: "Company Name",
+             },
+             {
+                 field: "Dob",
+                 title: "Company Name",
+             },
+             {
+                 field: "Address",
+                 title:"ghjkgh",
+             },
+             {
+                 field: "Status",
+                 title: "Company Name",
+             },
+         ],
+     });
+    </script>
+</body>
+</html>

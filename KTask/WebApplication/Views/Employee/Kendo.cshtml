@@ -1,0 +1,79 @@
+﻿<div id="fixtureGrid">
+<script>
+    var crudServiceBaseUrl = "/Umbraco/Surface/Kendo/";
+    debugger
+    const kendoDataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                url: crudServiceBaseUrl + "Kendo",
+                dataType: "json",
+                type: "POST"
+            },
+            //update: {
+            //    url: crudServiceBaseUrl + "UpdateFixturesKendoGrid",
+            //    dataType: "json",
+            //    type: "POST",
+            //    complete: function () {
+            //        $("#fixtureGrid").data("kendoGrid").dataSource.read();
+            //        $('#fixtureGrid').data("kendoGrid").refresh();
+            //    }
+            //},
+            //destroy: {
+            //    url: crudServiceBaseUrl + "DeleteFixturesKendoGrid",
+            //    dataType: "json",
+            //    type: "POST",
+            //    complete: function () {
+            //        $("#fixtureGrid").data("kendoGrid").dataSource.read();
+            //        $('#fixtureGrid').data("kendoGrid").refresh();
+            //    }
+            //},
+            //create: {
+            //    url: crudServiceBaseUrl + "CreateFixturesKendoGrid",
+            //    dataType: "json",
+            //    type: "POST"
+            //},
+            //parameterMap: function(options, operation) {
+            //    if (operation !== "read" && options.models) {
+            //        return { models: window.kendo.stringify(options.models) };
+            //    }
+            //    return options;
+            //}
+        },
+        serverPaging: true,
+        pageSize: 5,
+        schema: {
+            data: "EmpClass",
+            model: {
+                id: "Id",
+                fields: {
+                    Id:          { editable: false, nullable: true },
+                    //HomeTeam:           { editable: false },
+                    //Opponent:           { editable: false }
+            }
+}
+        }
+    });
+   $("#fixtureGrid").kendoGrid({
+        dataSource: kendoDataSource,
+        sortable: true,
+        scrollable: true,
+        filterable: true,
+        resizable: true,
+        pageable: {
+            alwaysVisible: true,
+            refresh: true,
+            pageSizes: [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            buttonCount: 5,
+            skip: 0,
+            take: 10
+        },
+        columns: [
+            { field: "Id", title: "EmployeeId" }],
+            //{ field: "HomeTeam", title: "Home Team"},
+            //{ field: "Opponent", title: "Opponent"},
+            //{ command: ["edit","destroy"], title: "&nbsp;", width:"180px"}],
+        editable: "popup"
+    });
+});
+</script>
+</div>
