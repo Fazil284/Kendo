@@ -143,6 +143,4 @@ C:\Users\fazil\Desktop\KendoTask\KendoTask\obj\Debug\net5.0\KendoTask.dll
 C:\Users\fazil\Desktop\KendoTask\KendoTask\obj\Debug\net5.0\ref\KendoTask.dll
 C:\Users\fazil\Desktop\KendoTask\KendoTask\obj\Debug\net5.0\KendoTask.pdb
 C:\Users\fazil\Desktop\KendoTask\KendoTask\obj\Debug\net5.0\KendoTask.genruntimeconfig.cache
-C:\Users\fazil\Desktop\KendoTask\KendoTask\obj\Debug\net5.0\Razor\Views\Employee\Index.cshtml.g.cs
 C:\Users\fazil\Desktop\KendoTask\KendoTask\obj\Debug\net5.0\Razor\Views\Employee\KendoIndex.cshtml.g.cs
-C:\Users\fazil\Desktop\KendoTask\KendoTask\obj\Debug\net5.0\Razor\Views\Employee\Kendo.cshtml.g.cs
